@@ -10,8 +10,7 @@ export default class Provider extends PureComponent {
   };
 
   static propTypes = {
-    children: PropTypes.oneOfType([PropTypes.node, PropTypes.element, PropTypes.string])
-      .isRequired,
+    children: PropTypes.node.isRequired,
     store: PropTypes.object
   };
 

@@ -1,5 +1,4 @@
 import shallowEqual from "../utils/shallowEqual";
-import trigger from "../utils/trigger";
 
 const defaultMergeProps = (modelProps, defaultsProps, props) => ({
   ...props,
@@ -34,6 +33,7 @@ export default (
   mapTriggerToProps,
   mergeProps = defaultMergeProps
 ) => {
+  let trigger = (...args) => store.trigger(...args);
   let storeProps = mapStoreToProps ? mapStoreToProps(store, props) : {};
   let triggerProps = mapTriggerToProps ? mapTriggerToProps(trigger, props) : {};
   let lastProps = props;

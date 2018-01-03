@@ -5,7 +5,6 @@ import Backbone from "backbone";
 import { CONTEXT_KEY } from "../const";
 import getDisplayName from "../utils/getDisplayName";
 import shallowEqual from "../utils/shallowEqual";
-import trigger from "../utils/trigger";
 import StoreWatcher from "../StoreWatcher";
 import createMapToProps from "./createMapToProps";
 

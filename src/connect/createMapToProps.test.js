@@ -1,5 +1,4 @@
 import Backbone from 'backbone';
-import trigger from '../utils/trigger';
 import createMapToProps from "./createMapToProps";
 
 
@@ -23,12 +22,9 @@ describe('Should pass store and props to mapStoreToProps', () => {
     const props = {};
     const mock = jest.fn((store) => ({}));
     const mapToProps = createMapToProps(store, props, mock);
-    expect(mock).toBeCalledWith(store, props);
-    mapToProps.storeUpdated();
-    expect(mock.mock.calls.length).toBe(2);
     const nextProps = {a: 1};
     mapToProps.updateProps(nextProps);
-    expect(mock.mock.calls.length).toBe(2);
+    expect(mock.mock.calls.length).toBe(1);
   });
 });
 
@@ -38,13 +34,13 @@ describe('Should pass trigger and props to mapTriggerToProps', () => {
     const props = {};
     const mock = jest.fn((trigger, props) => ({}));
     const mapToProps = createMapToProps(store, props, null, mock);
-    expect(mock).toBeCalledWith(trigger, props);
+    expect(mock.mock.calls[0][1]).toBe(props);
     mapToProps.storeUpdated();
     expect(mock.mock.calls.length).toBe(1);
     const nextProps = {a: 1};
     mapToProps.updateProps(nextProps);
     expect(mock.mock.calls.length).toBe(2);
-    expect(mock).toBeCalledWith(trigger, nextProps);
+    expect(mock.mock.calls[1][1]).toBe(nextProps);
   });
 
   test('test (trigger) => ({}) function', () => {
@@ -52,9 +48,6 @@ describe('Should pass trigger and props to mapTriggerToProps', () => {
     const props = {};
     const mock = jest.fn((trigger) => ({}));
     const mapToProps = createMapToProps(store, props, null, mock);
-    expect(mock).toBeCalledWith(trigger, props);
-    mapToProps.storeUpdated();
-    expect(mock.mock.calls.length).toBe(1);
     const nextProps = {a: 1};
     mapToProps.updateProps(nextProps);
     expect(mock.mock.calls.length).toBe(1);

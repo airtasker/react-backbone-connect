@@ -1,7 +1,7 @@
 {
   "name": "react-backbone-connect",
-  "version": "0.0.5",
-  "description": "",
+  "version": "0.0.6",
+  "description": "an react redux like lib but for backbone",
   "main": "./lib/index.js",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
