@@ -8,10 +8,11 @@ const env = process.env.NODE_ENV;
 
 const config = {
   entry: "src/index.js",
-  external: ["react", "backbone"],
+  external: ["react", "backbone", "prop-types"],
   globals: {
     react: "React",
-    backbone: "Backbone"
+    backbone: "Backbone",
+    'prop-types': "PropTypes",
   },
   format: "umd",
   moduleName: "ReactBackboneConnect",

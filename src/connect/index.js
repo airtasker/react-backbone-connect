@@ -23,7 +23,7 @@ export default (mapModelToProps, mapTriggerToProps, mergeProps) => {
         super(props, context);
         this.storeWatcher = new StoreWatcher(context[CONTEXT_KEY]);
         this.mapToProps = createMapToProps(
-          this.storeWatcher,
+          this.storeWatcher.wrappedStore,
           props,
           mapModelToProps,
           mapTriggerToProps,

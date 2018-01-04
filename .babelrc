@@ -27,11 +27,8 @@
     "commonjs": {
       "plugins": [["transform-es2015-modules-commonjs", { "loose": true }]]
     },
-    "es": {
-      "plugins": ["./build/use-lodash-es"]
-    },
     "rollup": {
-      "plugins": ["./build/use-lodash-es", "external-helpers"]
+      "plugins": ["external-helpers"]
     },
     "test": {
       "presets": ["es2015", "react", "stage-0"]

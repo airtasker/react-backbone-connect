@@ -1,6 +1,6 @@
 {
   "name": "react-backbone-connect",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "an react redux like lib but for backbone",
   "main": "./lib/index.js",
   "module": "es/index.js",
@@ -74,6 +74,7 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-15": "^1.0.5",
     "jest": "^22.0.4",
+    "prop-types": ">=15.5.0",
     "react": ">=15.5.4",
     "react-dom": "^15.6.2",
     "react-test-renderer": "^15.6.2",
@@ -85,13 +86,10 @@
     "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-uglify": "^2.0.1"
   },
-  "dependencies": {
-    "lodash": "^4.2.0",
-    "lodash-es": "^4.2.0",
-    "prop-types": ">=15.5.10"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0-0 || ^16.0.0-0",
-    "backbone": "^3.0.0"
+    "backbone": "^3.0.0",
+    "prop-types": ">=15.5.0"
   }
 }

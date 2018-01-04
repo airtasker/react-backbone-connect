@@ -71,11 +71,7 @@ export default class StoreWatcher {
   events = Object.create(Backbone.Events);
 
   constructor(store) {
-    this.store = wrap(this.cache, this.triggerChange, store);
-  }
-
-  get(key) {
-    return this.store.get(key);
+    this.wrappedStore = wrap(this.cache, this.triggerChange, store);
   }
 
   triggerChange = () => {
