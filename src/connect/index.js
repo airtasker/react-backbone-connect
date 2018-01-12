@@ -57,6 +57,10 @@ export default (mapModelToProps, mapTriggerToProps, mergeProps) => {
         return this.state.mergedProps !== nextState.mergedProps;
       }
 
+      componentWillUnmount() {
+        this.storeWatcher.destory();
+      }
+
       render() {
         return <WrappedComponent {...this.state.mergedProps} />;
       }
