@@ -27,9 +27,6 @@
     "commonjs": {
       "plugins": [["transform-es2015-modules-commonjs", { "loose": true }]]
     },
-    "es": {
-      "plugins": ["babel-plugin-add-module-exports"]
-    },
     "rollup": {
       "plugins": ["external-helpers"]
     },

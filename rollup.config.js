@@ -14,7 +14,7 @@ const config = {
     backbone: "Backbone",
     'prop-types': "PropTypes",
   },
-  format: "umd",
+  format: env === 'es' ? 'es' : "umd",
   moduleName: "ReactBackboneConnect",
   plugins: [
     nodeResolve(),
@@ -28,7 +28,7 @@ const config = {
   ]
 };
 
-if (env === "production") {
+if (env === "min") {
   config.plugins.push(
     uglify({
       compress: {
