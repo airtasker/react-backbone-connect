@@ -5,7 +5,7 @@ React bindings for [Backbone](https://Backbonejs.org/).
 Inspaired by [React Redux](https://github.com/Reactjs/React-Redux)  
 Performant and flexible.
 
-[![npm downloads](https://img.shields.io/npm/dm/React-Backbone-connect.svg?style=flat-square)](https://www.npmjs.com/package/React-Backbone-connect)
+[![npm downloads](https://img.shields.io/npm/dm/react-backbone-connect.svg?style=flat-square)](https://www.npmjs.com/package/React-Backbone-connect)
 
 In a Backbone project, there is a lot of logic deeply coupled in Backbone models.
 By using ReactBackboneConnect, it enables you to build a Redux like project using Backbone and React.  
@@ -14,7 +14,7 @@ By decoupling the Backbone models from React components, transitioning from Back
 
 ## Installation
 
-React Backbone Connect requires **React 0.14 or later.**
+React Backbone Connect requires **React 0.14 or later** and **Backbone 1.1.2 or later.**
 
 ```
 npm install --save React-Backbone-connect
