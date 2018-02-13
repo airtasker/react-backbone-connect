@@ -1,9 +1,9 @@
 import shallowEqual from "../utils/shallowEqual";
 
-const defaultMergeProps = (modelProps, defaultsProps, props) => ({
+const defaultMergeProps = (storeProps, triggerProps, props) => ({
   ...props,
-  ...modelProps,
-  ...defaultsProps
+  ...storeProps,
+  ...triggerProps
 });
 const hasPropsParam = fn => fn && fn.length > 1;
 
