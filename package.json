@@ -1,16 +1,21 @@
 {
-  "name": "react-backbone-connect",
-  "version": "0.0.15",
+  "name": "@airtasker/react-backbone-connect",
+  "version": "0.0.1",
   "description": "an react redux like lib but for backbone",
   "main": "./lib/index.js",
   "module": "es/index.js",
   "jsnext:main": "es/index.js",
   "scripts": {
-    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib --ignore test.js",
-    "build:es": "cross-env BABEL_ENV=rollup NODE_ENV=es rollup -c -o es/index.js",
-    "build:umd": "cross-env BABEL_ENV=rollup NODE_ENV=development rollup -c -o dist/react-backbone-connect.js",
-    "build:umd:min": "cross-env BABEL_ENV=rollup NODE_ENV=min rollup -c -o dist/react-backbone-connect.min.js",
-    "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
+    "build:commonjs":
+      "cross-env BABEL_ENV=commonjs babel src --out-dir lib --ignore test.js",
+    "build:es":
+      "cross-env BABEL_ENV=rollup NODE_ENV=es rollup -c -o es/index.js",
+    "build:umd":
+      "cross-env BABEL_ENV=rollup NODE_ENV=development rollup -c -o dist/react-backbone-connect.js",
+    "build:umd:min":
+      "cross-env BABEL_ENV=rollup NODE_ENV=min rollup -c -o dist/react-backbone-connect.min.js",
+    "build":
+      "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
     "clean": "rimraf lib dist es coverage",
     "prepare": "npm run clean && npm run build",
     "test": "cross-env BABEL_ENV=test jest"
@@ -19,19 +24,8 @@
     "type": "git",
     "url": "https://github.com/airtasker/react-backbone-connect.git"
   },
-  "files": [
-    "dist",
-    "lib",
-    "src",
-    "es"
-  ],
-  "keywords": [
-    "react",
-    "reactjs",
-    "backbone",
-    "flux",
-    "redux"
-  ],
+  "files": ["dist", "lib", "src", "es"],
+  "keywords": ["react", "reactjs", "backbone", "flux", "redux"],
   "author": "Zhenxi (Eric) Chen <eric.chen@airtasker.com>",
   "license": "MIT",
   "homepage": "https://github.com/airtasker/react-backbone-connect",
