@@ -1,8 +1,8 @@
 # React Backbone Connect
 
 React bindings for [Backbone](https://Backbonejs.org/).  
-Inspaired by [React Redux](https://github.com/Reactjs/React-Redux)  
-Performant and flexible.
+inspired by [React Redux](https://github.com/Reactjs/React-Redux)  
+Performance and flexible.
 
 [![npm downloads](https://img.shields.io/npm/dm/@airtasker/react-backbone-connect.svg?style=flat-square)](https://www.npmjs.com/package/@airtasker/react-backbone-connect)
 

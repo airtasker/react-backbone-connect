@@ -10,7 +10,7 @@ import createMapToProps from "./createMapToProps";
 
 export default (mapModelToProps, mapTriggerToProps, mergeProps) => {
   return WrappedComponent => {
-    class Connectted extends Component {
+    class Connected extends Component {
       static displayName = `BackboneConnect(${getDisplayName(
         WrappedComponent
       )})`;
@@ -58,13 +58,13 @@ export default (mapModelToProps, mapTriggerToProps, mergeProps) => {
       }
 
       componentWillUnmount() {
-        this.storeWatcher.destory();
+        this.storeWatcher.destroy();
       }
 
       render() {
         return <WrappedComponent {...this.state.mergedProps} />;
       }
     }
-    return Connectted;
+    return Connected;
   };
 };

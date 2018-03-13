@@ -17,7 +17,7 @@ const wrapModel = (curriedWrap, triggerChange, model) => {
 
   return {
     wrapped,
-    destory() {
+    destroy() {
       model.off("change", changeListener);
     }
   };
@@ -35,7 +35,7 @@ const wrapCollection = (curriedWrap, triggerChange, collection) => {
 
   return {
     wrapped,
-    destory() {
+    destroy() {
       collection.off("add remove reset", triggerChange);
     }
   };
@@ -86,7 +86,7 @@ export default class StoreWatcher {
     this.events.off(eventName, listener);
   }
 
-  destory() {
-    this.cache.forEach(({ destory }) => destory());
+  destroy() {
+    this.cache.forEach(({ destroy }) => destroy());
   }
 }
