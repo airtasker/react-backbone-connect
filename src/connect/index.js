@@ -21,6 +21,7 @@ export default (mapModelToProps, mapTriggerToProps, mergeProps) => {
 
       constructor(props, context) {
         super(props, context);
+        this._unmounted = false;
         this.storeWatcher = new StoreWatcher(context[CONTEXT_KEY]);
         this.mapToProps = createMapToProps(
           this.storeWatcher.wrappedStore,
@@ -36,9 +37,11 @@ export default (mapModelToProps, mapTriggerToProps, mergeProps) => {
 
         this.storeWatcher.on("change", () => {
           this.mapToProps.storeUpdated();
-          this.setState({
-            mergedProps: this.mapToProps.getMergedProps()
-          });
+          if (!this._unmounted) {
+            this.setState({
+              mergedProps: this.mapToProps.getMergedProps()
+            });
+          }
         });
       }
 
@@ -58,6 +61,7 @@ export default (mapModelToProps, mapTriggerToProps, mergeProps) => {
       }
 
       componentWillUnmount() {
+        this._unmounted = true;
         this.storeWatcher.destroy();
       }
 
