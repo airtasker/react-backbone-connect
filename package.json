@@ -4,14 +4,10 @@
   "description": "an react redux like lib but for backbone",
   "main": "./lib/index.js",
   "scripts": {
-    "build:commonjs":
-      "cross-env BABEL_ENV=commonjs babel src --out-dir lib --ignore test.js",
-    "build:umd":
-      "cross-env BABEL_ENV=rollup NODE_ENV=development rollup -c -o dist/react-backbone-connect.js",
-    "build:umd:min":
-      "cross-env BABEL_ENV=rollup NODE_ENV=min rollup -c -o dist/react-backbone-connect.min.js",
-    "build":
-      "npm run build:commonjs && npm run build:umd && npm run build:umd:min",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib --ignore test.js",
+    "build:umd": "cross-env BABEL_ENV=rollup NODE_ENV=development rollup -c -o dist/react-backbone-connect.js",
+    "build:umd:min": "cross-env BABEL_ENV=rollup NODE_ENV=min rollup -c -o dist/react-backbone-connect.min.js",
+    "build": "npm run build:commonjs && npm run build:umd && npm run build:umd:min",
     "clean": "rimraf lib dist coverage",
     "prepare": "npm run clean && npm run build",
     "test": "cross-env BABEL_ENV=test jest"
@@ -20,14 +16,25 @@
     "type": "git",
     "url": "https://github.com/airtasker/react-backbone-connect.git"
   },
-  "files": ["dist", "lib", "src", "es"],
-  "keywords": ["react", "reactjs", "backbone", "flux", "redux"],
+  "files": [
+    "dist",
+    "lib",
+    "src",
+    "es"
+  ],
+  "keywords": [
+    "react",
+    "reactjs",
+    "backbone",
+    "flux",
+    "redux"
+  ],
   "author": "Zhenxi (Eric) Chen <eric.chen@airtasker.com>",
   "license": "MIT",
   "homepage": "https://github.com/airtasker/react-backbone-connect",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.2",
+    "babel-core": "^6.26.3",
     "babel-jest": "^22.0.4",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
@@ -37,8 +44,8 @@
     "babel-register": "^6.3.13",
     "backbone": "^1.1.2",
     "cross-env": "^5.1.3",
-    "enzyme": "^3.3.0",
-    "enzyme-adapter-react-15": "^1.0.5",
+    "enzyme": "^3.5.1",
+    "enzyme-adapter-react-15": "^1.1.0",
     "jest": "^22.0.4",
     "prop-types": ">=15.5.0",
     "react": ">=15.5.4",
