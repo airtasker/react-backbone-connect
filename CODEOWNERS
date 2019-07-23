@@ -1,0 +1,17 @@
+# This file describes the Code Owners of this repository
+# following a Airtasker'ized version of Github convention
+# see https://help.github.com/en/articles/about-code-owners for more details
+
+# This file has to be groomed by the repository committers
+
+# Format
+# /path/ @github_user
+
+# Note: Uncommented lines will auto-assign users to related PRs
+
+
+# Main school: <INSERT RELATED SCHOOL NAME(S)>
+# Main slack channel: <INSERT RELATED SLACK CHANNEL(S)>
+
+# Knownledgeable people you could nudge
+# PLEASE GROOM THE FOLLOWING LIST AND REMOVE THIS COMMENT LINE
