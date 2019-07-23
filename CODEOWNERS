@@ -1,0 +1,14 @@
+# This file describes the Code Owners of this repository
+# following a Airtasker'ized version of Github convention
+# see https://help.github.com/en/articles/about-code-owners for more details
+
+# This file has to be groomed by the repository committers
+
+# Format
+# /path/ @github_user
+
+# Note: Uncommented lines will auto-assign users to related PRs
+
+
+# Airtasker School: Web School
+# Airtasker Slack channel: #dev-frontend
