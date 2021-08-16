@@ -9,13 +9,13 @@ import StoreWatcher from "../StoreWatcher";
 import createMapToProps from "./createMapToProps";
 
 export default (mapModelToProps, mapTriggerToProps, mergeProps) => {
-  return WrappedComponent => {
+  return (WrappedComponent) => {
     class Connected extends Component {
       static displayName = `BackboneConnect(${getDisplayName(
         WrappedComponent
       )})`;
       static contextTypes = {
-        [CONTEXT_KEY]: PropTypes.object
+        [CONTEXT_KEY]: PropTypes.object,
       };
       static WrappedComponent = WrappedComponent;
 
@@ -32,27 +32,27 @@ export default (mapModelToProps, mapTriggerToProps, mergeProps) => {
         );
 
         this.state = {
-          mergedProps: this.mapToProps.getMergedProps()
+          mergedProps: this.mapToProps.getMergedProps(),
         };
 
         this.storeWatcher.on("change", () => {
           this.mapToProps.storeUpdated();
           if (!this._unmounted) {
             this.setState({
-              mergedProps: this.mapToProps.getMergedProps()
+              mergedProps: this.mapToProps.getMergedProps(),
             });
           }
         });
       }
 
-      componentWillReceiveProps(nextProps) {
+      UNSAFE_componentWillReceiveProps(nextProps) {
         if (shallowEqual(this.props, nextProps)) {
           return;
         }
         this.mapToProps.updateProps(nextProps);
         this.mapToProps.getMergedProps();
         this.setState({
-          mergedProps: this.mapToProps.getMergedProps()
+          mergedProps: this.mapToProps.getMergedProps(),
         });
       }
 
