@@ -15,7 +15,7 @@ By decoupling the Backbone models from React components, transitioning from Back
 React Backbone Connect requires **React 0.14 or later** and **Backbone 1.1.2 or later.**
 
 ```
-npm install --save @airtasker/react-backbone-connect
+pnpm install --save @airtasker/react-backbone-connect
 ```
 
 This assumes that you’re using [npm](http://npmjs.com/) package manager with a module bundler like [Webpack](https://webpack.js.org/) or [Browserify](http://browserify.org/) to consume [CommonJS modules](http://webpack.github.io/docs/commonjs.html).
