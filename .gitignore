@@ -61,3 +61,6 @@ typings/
 dist
 es
 lib
+
+yarn.lock
+package-lock.json

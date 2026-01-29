@@ -1,6 +1,6 @@
 {
   "name": "@airtasker/react-backbone-connect",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "an react redux like lib but for backbone",
   "main": "./lib/index.js",
   "scripts": {
@@ -69,5 +69,6 @@
     "react": "^0.14.0 || ^15.0.0-0 || ^16.0.0-0",
     "backbone": "^1.1.2",
     "prop-types": ">=15.5.0"
-  }
+  },
+  "packageManager": "pnpm@10.28.1"
 }
