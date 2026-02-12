@@ -3,7 +3,6 @@ ignoredBuiltDependencies:
   - core-js-pure
   - fsevents
 
-settings:
-  autoInstallPeers: true
-  minimumReleaseAge: 10080
-  strictPeerDependencies: false
+minimumReleaseAge: 10080
+minimumReleaseAgeExclude:
+  - '@airtasker/*'
