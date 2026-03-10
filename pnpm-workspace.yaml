@@ -3,6 +3,11 @@ ignoredBuiltDependencies:
   - core-js-pure
   - fsevents
 
+# Supply Chain Security Configuration
+# Documentation: https://airtasker.atlassian.net/wiki/spaces/ENG/pages/4767645728/JavaScript+Package+Manager+Configuration
+# Reference: https://pnpm.io/supply-chain-security
+
+strictDepBuilds: true
+blockExoticSubdeps: true
 minimumReleaseAge: 10080
-minimumReleaseAgeExclude:
-  - '@airtasker/*'
+minimumReleaseAgeExclude: '@airtasker/*'
